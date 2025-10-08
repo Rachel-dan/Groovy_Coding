@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
+# Exit immediately if a command fails.
 set -o errexit
 
-echo "==> Installing SDKMAN..."
+echo "==> Installing Python dependencies..."
+pip install -r requirements.txt
+
+echo "==> Installing SDKMAN, Java, and Groovy into a persistent directory..."
+# Export the install directory to be inside our project folder
+export SDKMAN_DIR="$PWD/.sdkman"
+# Download and install SDKMAN
 curl -s "https://get.sdkman.io" | bash
-
-echo "==> Sourcing SDKMAN script..."
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-echo "==> Installing Java..."
+# Source the script to make the 'sdk' command available
+source "$SDKMAN_DIR/bin/sdkman-init.sh"
+# Install Java and Groovy
 yes | sdk install java 17.0.10-tem
-
-echo "==> Installing Groovy..."
 yes | sdk install groovy 4.0.27
 
-GROOVY_EXEC_PATH="$HOME/.sdkman/candidates/groovy/current/bin/groovy"
-echo "==> Groovy executable path is: $GROOVY_EXEC_PATH"
-
-echo "==> Starting Gunicorn server with a 120-second timeout..."
-GROOVY_EXEC_PATH=$GROOVY_EXEC_PATH gunicorn --timeout 120 app:app
+echo "==> Build complete."
