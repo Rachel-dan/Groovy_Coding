@@ -7,35 +7,14 @@ import re
 # Import the 'sys' module to check the operating system
 import sys
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # --- Configuration ---
 # MODIFIED AGAIN: We need the full, absolute path to the Groovy executable.
-if sys.platform == "win32":
-    # On Windows, provide the FULL path to your groovy.bat file.
-    #
-    # IMPORTANT: You MUST replace the placeholder path below with the actual path on your system.
-    # Find where you installed Groovy, go into its 'bin' folder, and find 'groovy.bat'.
-    # Use a raw string (r"...") to avoid issues with backslashes.
-    #
-    # EXAMPLE: GROOVY_PATH = r"C:\Program Files\Groovy\apache-groovy-4.0.27\bin\groovy.bat"
-    #
-    GROOVY_PATH = r"C:\groovy-4.0.27\bin\groovy.bat" 
-
-else:
-    # On Linux/macOS, use the absolute path as intended for the server.
-    GROOVY_PATH = "/opt/groovy/apache-groovy-4.0.27/bin/groovy"
-
-# This new check will warn you immediately if the path is wrong
-if not os.path.exists(GROOVY_PATH):
-    print("="*60)
-    print("!!! CONFIGURATION ERROR !!!")
-    print(f"The Groovy executable was not found at the path you specified:")
-    print(f"'{GROOVY_PATH}'")
-    print(f"Please open app.py and update the GROOVY_PATH variable to the correct location.")
-    print("="*60)
-    sys.exit(1) # Stop the app if the path is invalid
+GROOVY_PATH = "groovy"
 
 DATA_DIR = "data"
 # ... the rest of your app.py file remains exactly the same ...
@@ -243,5 +222,5 @@ def save_results():
         print(f"SERVER ERROR: Could not save results. Error: {e}")
         return jsonify({"error": "An error occurred while saving your results on the server."}), 500
 
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+# if __name__ == "__main__":
+#     app.run(debug=True, host='0.0.0.0')
