@@ -91,7 +91,19 @@ def run_groovy_script(script_content):
             encoding='utf-8'
         )
         stdout, stderr = process.communicate(timeout=15)
-        return stdout, stderr
+
+        # NEW LOGIC: If there is anything in stderr, it's a real error.
+        if stderr:
+            return stdout, stderr
+
+        # NEW LOGIC: Check stdout for the known warning message.
+        if "JAVA_HOME not set" in stdout:
+            # Treat this specific warning as an error.
+            return stdout, stdout
+
+        # If no errors or warnings, return the clean output.
+        return stdout, ""
+
     except subprocess.TimeoutExpired:
         return "", "Execution Error: Your code took too long to run and was terminated."
     finally:
