@@ -9,7 +9,7 @@ yes | sdk install groovy 4.0.27
 
 # Find the exact path to the groovy executable and export it.
 echo "--- Finding and exporting Groovy path ---"
-export GROOVY_EXEC_PATH=$(which groovy)
+export GROOVY_EXEC_PATH="$HOME/.sdkman/candidates/groovy/current/bin/groovy"
 echo "Groovy found at: $GROOVY_EXEC_PATH"
 
 # Start the Gunicorn server. It will now have access to the GROOVY_EXEC_PATH variable.
