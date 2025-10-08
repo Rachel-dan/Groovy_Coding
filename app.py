@@ -15,7 +15,8 @@ CORS(app)
 
 # --- Configuration ---
 # MODIFIED AGAIN: We need the full, absolute path to the Groovy executable.
-GROOVY_PATH = "groovy"
+# Read the absolute path to Groovy from the environment variable set in start.sh
+GROOVY_PATH = os.getenv('GROOVY_EXEC_PATH', 'groovy')
 
 DATA_DIR = "data"
 # ... the rest of your app.py file remains exactly the same ...
