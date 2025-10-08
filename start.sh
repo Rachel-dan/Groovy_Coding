@@ -18,4 +18,4 @@ echo "==> Groovy executable is at: $GROOVY_EXEC_PATH"
 echo "==> Launching Gunicorn with a long timeout..."
 # We pass the path as an environment variable directly to the gunicorn process
 # and give it a long timeout to allow for the slow JVM startup.
-GROOVY_EXEC_PATH=$GROOVY_EXEC_PATH gunicorn --timeout 120 app:app
+GROOVY_EXEC_PATH=$GROOVY_EXEC_PATH gunicorn --timeout 300 --workers 1 app:app
