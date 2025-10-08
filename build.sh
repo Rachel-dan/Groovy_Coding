@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-pip install -r requirements.txt
+set -o errexit
+```3.  Save the file.
