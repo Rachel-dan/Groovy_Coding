@@ -235,32 +235,6 @@
         }
       ],
       "code": ""
-    },
-    {
-      "topic": "Map Operations",
-      "question_id": 19,
-      "question": "Write a Groovy code to remove a particular key-value pair from a map. The code should return the modified map.",
-      "sample_test_cases": [
-        {
-          "input": "[ ['a':1, 'b':2], 'b' ]",
-          "expected_output": "{\"a\":1}"
-        },
-        {
-          "input": "[ ['x':10, 'y':20], 'x' ]",
-          "expected_output": "{\"y\":20}"
-        }
-      ],
-      "hidden_test_cases": [
-        {
-          "input": "[ ['a':1], 'c' ]",
-          "expected_output": "{\"a\":1}"
-        },
-        {
-          "input": "[ [:], 'key' ]",
-          "expected_output": "{}"
-        }
-      ],
-      "code": ""
     }
   ],
   "user_3": [
