@@ -1,4 +1,4 @@
-
+const RENDER_BACKEND_URL = 'https://groovy-backend.onrender.com';
 document.addEventListener('DOMContentLoaded', () => {
     // --- DOM Elements ---
     const questionTitleEl = document.getElementById('question-title');
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch(`/api/questions/${userId}`);
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/questions/${userId}`);
             if (!response.ok) {
                 const err = await response.json();
                 throw new Error(err.error || `HTTP error! status: ${response.status}`);
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsOutputEl.innerHTML = '<p class="placeholder">Executing all test cases...</p>';
 
         try {
-            const response = await fetch('/api/run', {
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/run`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 // MODIFIED: Send user_id along with the request.
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
         customOutputAreaEl.textContent = 'Executing...';
 
         try {
-            const response = await fetch('/api/custom_run', {
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/custom_run`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ code: userCode, input: customInput }),
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         finishBtn.textContent = 'Saving...';
 
         try {
-            const response = await fetch('/api/save_results', {
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/save_results`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
