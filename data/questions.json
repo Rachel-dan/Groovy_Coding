@@ -1,0 +1,829 @@
+{
+  "questions": [
+    {
+      "topic": "Loops",
+      "question_id": 1,
+      "question": "Write a Groovy code that returns a List<Integer> containing numbers from 1 to 10.",
+      "sample_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "[1,2,3,4,5,6,7,8,9,10]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[1,2,3,4,5,6,7,8,9,10]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "[1,2,3,4,5,6,7,8,9,10]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[1,2,3,4,5,6,7,8,9,10]"
+        }
+      ]
+    },
+    {
+      "topic": "Loops",
+      "question_id": 2,
+      "question": "Write a Groovy code to calculate the sum of the first 10 natural numbers. The code should return an integer.",
+      "sample_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "55"
+        },
+        {
+          "input": "[]",
+          "expected_output": "55"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "55"
+        },
+        {
+          "input": "[]",
+          "expected_output": "55"
+        }
+      ]
+    },
+    {
+      "topic": "Loops",
+      "question_id": 3,
+      "question": "Write a Groovy code that returns a list of strings representing the multiplication table of that number from 1 to 10.",
+      "sample_test_cases": [
+        {
+          "input": "7",
+          "expected_output": "[\"7 * 1 = 7\",\"7 * 2 = 14\",\"7 * 3 = 21\",\"7 * 4 = 28\",\"7 * 5 = 35\",\"7 * 6 = 42\",\"7 * 7 = 49\",\"7 * 8 = 56\",\"7 * 9 = 63\",\"7 * 10 = 70\"]"
+        },
+        {
+          "input": "5",
+          "expected_output": "[\"5 * 1 = 5\",\"5 * 2 = 10\",\"5 * 3 = 15\",\"5 * 4 = 20\",\"5 * 5 = 25\",\"5 * 6 = 30\",\"5 * 7 = 35\",\"5 * 8 = 40\",\"5 * 9 = 45\",\"5 * 10 = 50\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "1",
+          "expected_output": "[\"1 * 1 = 1\",\"1 * 2 = 2\",\"1 * 3 = 3\",\"1 * 4 = 4\",\"1 * 5 = 5\",\"1 * 6 = 6\",\"1 * 7 = 7\",\"1 * 8 = 8\",\"1 * 9 = 9\",\"1 * 10 = 10\"]"
+        },
+        {
+          "input": "10",
+          "expected_output": "[\"10 * 1 = 10\",\"10 * 2 = 20\",\"10 * 3 = 30\",\"10 * 4 = 40\",\"10 * 5 = 50\",\"10 * 6 = 60\",\"10 * 7 = 70\",\"10 * 8 = 80\",\"10 * 9 = 90\",\"10 * 10 = 100\"]"
+        }
+      ]
+    },
+    {
+      "topic": "Loops",
+      "question_id": 4,
+      "question": "Write a Groovy code that outputs the number with the digits reversed. The code should return an integer.",
+      "sample_test_cases": [
+        {
+          "input": "12345",
+          "expected_output": "54321"
+        },
+        {
+          "input": "-9876",
+          "expected_output": "-6789"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "120",
+          "expected_output": "21"
+        },
+        {
+          "input": "-543",
+          "expected_output": "-345"
+        }
+      ]
+    },
+    {
+      "topic": "Loops",
+      "question_id": 5,
+      "question": "Write a Groovy code to find the factorial value of any number. The code should return a BigInteger to handle large numbers.",
+      "sample_test_cases": [
+        {
+          "input": "5",
+          "expected_output": "120"
+        },
+        {
+          "input": "3",
+          "expected_output": "6"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "0",
+          "expected_output": "1"
+        },
+        {
+          "input": "1",
+          "expected_output": "1"
+        }
+      ]
+    },
+    {
+      "topic": "Loops",
+      "question_id": 6,
+      "question": "Write a Groovy code that returns each character of a string as a list of strings.",
+      "sample_test_cases": [
+        {
+          "input": "'Groovy'",
+          "expected_output": "[\"G\",\"r\",\"o\",\"o\",\"v\",\"y\"]"
+        },
+        {
+          "input": "'Test'",
+          "expected_output": "[\"T\",\"e\",\"s\",\"t\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "'Hi'",
+          "expected_output": "[\"H\",\"i\"]"
+        },
+        {
+          "input": "''",
+          "expected_output": "[]"
+        }
+      ]
+    },
+    {
+      "topic": "Loops",
+      "question_id": 7,
+      "question": "Write a Groovy code that displays the Cartesian product of two lists.",
+      "sample_test_cases": [
+        {
+          "input": "[ [1, 2], ['a', 'b'] ]",
+          "expected_output": "[[1,\"a\"],[1,\"b\"],[2,\"a\"],[2,\"b\"]]"
+        },
+        {
+          "input": "[ ['x'], [1, 2] ]",
+          "expected_output": "[[\"x\",1],[\"x\",2]]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ [1, 2], [3] ]",
+          "expected_output": "[[1,3],[2,3]]"
+        },
+        {
+          "input": "[ [], [1, 2] ]",
+          "expected_output": "[]"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 8,
+      "question": "Write a Groovy code to sum all the items in a list. The code should return an integer.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 2, 3]",
+          "expected_output": "6"
+        },
+        {
+          "input": "[10, 20, 30, 40]",
+          "expected_output": "100"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[5, 5, 5]",
+          "expected_output": "15"
+        },
+        {
+          "input": "[]",
+          "expected_output": "0"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 9,
+      "question": "Write a Groovy code to multiply the items in a list. The code should return an integer.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 2, 3, 4]",
+          "expected_output": "24"
+        },
+        {
+          "input": "[2, 5, 10]",
+          "expected_output": "100"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "1"
+        },
+        {
+          "input": "[7, 1]",
+          "expected_output": "7"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 10,
+      "question": "Write a Groovy code to get the largest number from a list. The code should return an integer or null if the list is empty.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 5, 2, 8, 3]",
+          "expected_output": "8"
+        },
+        {
+          "input": "[10, 2, 5]",
+          "expected_output": "10"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[-1, -5, -2]",
+          "expected_output": "-1"
+        },
+        {
+          "input": "[]",
+          "expected_output": "null"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 11,
+      "question": "Write a Groovy code to get the smallest number from a list. The code should return an integer or null if the list is empty.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 5, 2, 8, 3]",
+          "expected_output": "1"
+        },
+        {
+          "input": "[10, 2, 5]",
+          "expected_output": "2"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[-1, -5, -2]",
+          "expected_output": "-5"
+        },
+        {
+          "input": "[]",
+          "expected_output": "null"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 12,
+      "question": "Write a Groovy code that removes duplicates from a list. The code should return a new list with unique elements, preserving order.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 2, 2, 3, 1, 4]",
+          "expected_output": "[1,2,3,4]"
+        },
+        {
+          "input": "['a', 'b', 'a', 'c']",
+          "expected_output": "[\"a\",\"b\",\"c\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[5, 5, 5, 5, 5]",
+          "expected_output": "[5]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[]"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 13,
+      "question": "Write a Groovy code to calculate the difference between the two lists (items in the first list but not in the second).",
+      "sample_test_cases": [
+        {
+          "input": "[ [1, 2, 3, 4], [2, 4] ]",
+          "expected_output": "[1,3]"
+        },
+        {
+          "input": "[ [1, 2, 3], [4, 5, 6] ]",
+          "expected_output": "[1,2,3]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ ['a', 'b', 'c'], ['b'] ]",
+          "expected_output": "[\"a\",\"c\"]"
+        },
+        {
+          "input": "[ [1, 2], [1, 2, 3] ]",
+          "expected_output": "[]"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 14,
+      "question": "Write a Groovy code that returns a list containing the strings 'red', 'yellow', and 'blue'.",
+      "sample_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "[\"red\",\"yellow\",\"blue\"]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[\"red\",\"yellow\",\"blue\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "[\"red\",\"yellow\",\"blue\"]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[\"red\",\"yellow\",\"blue\"]"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 15,
+      "question": "Write a Groovy code to insert an element into the list at the first position. The code should return the modified list.",
+      "sample_test_cases": [
+        {
+          "input": "[ [1, 2, 3], 0 ]",
+          "expected_output": "[0,1,2,3]"
+        },
+        {
+          "input": "[ ['b', 'c'], 'a' ]",
+          "expected_output": "[\"a\",\"b\",\"c\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ [], 99 ]",
+          "expected_output": "[99]"
+        },
+        {
+          "input": "[ [true], false ]",
+          "expected_output": "[false,true]"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 16,
+      "question": "Write a Groovy code to copy one list into another. The code should return a new list that is a copy of the sourceList.",
+      "sample_test_cases": [
+        {
+          "input": "[[1, 2, 3]]",
+          "expected_output": "[1,2,3]"
+        },
+        {
+          "input": "[['a', 'b']]",
+          "expected_output": "[\"a\",\"b\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[[]]",
+          "expected_output": "[]"
+        },
+        {
+          "input": "[[true, false]]",
+          "expected_output": "[true,false]"
+        }
+      ]
+    },
+    {
+      "topic": "List Operations",
+      "question_id": 17,
+      "question": "Write a Groovy code to reverse the elements in a list. The code should return a new reversed list.",
+      "sample_test_cases": [
+        {
+          "input": "[[1, 2, 3]]",
+          "expected_output": "[3,2,1]"
+        },
+        {
+          "input": "[['a', 'b', 'c']]",
+          "expected_output": "[\"c\",\"b\",\"a\"]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[['a']]",
+          "expected_output": "[\"a\"]"
+        },
+        {
+          "input": "[[]]",
+          "expected_output": "[]"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 18,
+      "question": "Write a Groovy code to associate the specified value with the specified key in a Map. The code should return the modified map.",
+      "sample_test_cases": [
+        {
+          "input": "[ [:], 'a', 1 ]",
+          "expected_output": "{\"a\":1}"
+        },
+        {
+          "input": "[ ['a':1], 'a', 2 ]",
+          "expected_output": "{\"a\":2}"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ ['a':1], 'b', 2 ]",
+          "expected_output": "{\"a\":1,\"b\":2}"
+        },
+        {
+          "input": "[[:], 1, 'one']",
+          "expected_output": "{\"1\":\"one\"}"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 19,
+      "question": "Write a Groovy code to remove a particular key-value pair from a map. The code should return the modified map.",
+      "sample_test_cases": [
+        {
+          "input": "[ ['a':1, 'b':2], 'b' ]",
+          "expected_output": "{\"a\":1}"
+        },
+        {
+          "input": "[ ['x':10, 'y':20], 'x' ]",
+          "expected_output": "{\"y\":20}"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ ['a':1], 'c' ]",
+          "expected_output": "{\"a\":1}"
+        },
+        {
+          "input": "[ [:], 'key' ]",
+          "expected_output": "{}"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 20,
+      "question": "Write a Groovy code that searches for a key in a Map. The code should return true if the key is available, otherwise false.",
+      "sample_test_cases": [
+        {
+          "input": "[ ['a':1, 'b':2], 'a' ]",
+          "expected_output": "true"
+        },
+        {
+          "input": "[ ['a':1, 'b':2], 'c' ]",
+          "expected_output": "false"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ [:], 'key' ]",
+          "expected_output": "false"
+        },
+        {
+          "input": "[ ['key':'value'], 'value' ]",
+          "expected_output": "false"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 21,
+      "question": "Write a Groovy code to count the number of key-value mappings in a map. The code should return an integer.",
+      "sample_test_cases": [
+        {
+          "input": "[ ['a':1, 'b':2] ]",
+          "expected_output": "2"
+        },
+        {
+          "input": "[ [:] ]",
+          "expected_output": "0"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ ['a':1, 'b':2, 'c':3] ]",
+          "expected_output": "3"
+        },
+        {
+          "input": "[['a':1]]",
+          "expected_output": "1"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 22,
+      "question": "Write a Groovy code to copy all mappings from the specified map to another map. The code should return a new map.",
+      "sample_test_cases": [
+        {
+          "input": "[ ['a':1, 'b':2] ]",
+          "expected_output": "{\"a\":1,\"b\":2}"
+        },
+        {
+          "input": "[ ['x': 10] ]",
+          "expected_output": "{\"x\":10}"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ [:] ]",
+          "expected_output": "{}"
+        },
+        {
+          "input": "[['a':1, 'b':[1,2]]]",
+          "expected_output": "{\"a\":1,\"b\":[1,2]}"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 23,
+      "question": "Write a Groovy code to get the value of a specified key in a map. The code should return the value or null if the key is not found.",
+      "sample_test_cases": [
+        {
+          "input": "[ ['a':1, 'b':2], 'b' ]",
+          "expected_output": "2"
+        },
+        {
+          "input": "[ ['name':'Groovy', 'version':4], 'name' ]",
+          "expected_output": "\"Groovy\""
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ ['a':1], 'c' ]",
+          "expected_output": "null"
+        },
+        {
+          "input": "[[:], 'key']",
+          "expected_output": "null"
+        }
+      ]
+    },
+    {
+      "topic": "Map Operations",
+      "question_id": 24,
+      "question": "Write a Groovy code to merge two maps into a single map. If keys conflict, the value from the second map should be used.",
+      "sample_test_cases": [
+        {
+          "input": "[ ['a':1], ['b':2] ]",
+          "expected_output": "{\"a\":1,\"b\":2}"
+        },
+        {
+          "input": "[ ['a':1, 'b':2], ['b':3, 'c':4] ]",
+          "expected_output": "{\"a\":1,\"b\":3,\"c\":4}"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[ [:], ['a':1] ]",
+          "expected_output": "{\"a\":1}"
+        },
+        {
+          "input": "[['a':1], [:]]",
+          "expected_output": "{\"a\":1}"
+        }
+      ]
+    },
+    {
+      "topic": "Date Operations",
+      "question_id": 25,
+      "question": "Write a Groovy code to display a fixed current date. For testing, this code should always return the string '2025-09-01'.",
+      "sample_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "\"2025-09-01\""
+        },
+        {
+          "input": "[]",
+          "expected_output": "\"2025-09-01\""
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "\"2025-09-01\""
+        },
+        {
+          "input": "[]",
+          "expected_output": "\"2025-09-01\""
+        }
+      ]
+    },
+    {
+      "topic": "Date Operations",
+      "question_id": 26,
+      "question": "Write a Groovy code to display a fixed yesterday's date. For testing, this code should always return '2025-08-31' (the day before '2025-09-01').",
+      "sample_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "\"2025-08-31\""
+        },
+        {
+          "input": "[]",
+          "expected_output": "\"2025-08-31\""
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "\"2025-08-31\""
+        },
+        {
+          "input": "[]",
+          "expected_output": "\"2025-08-31\""
+        }
+      ]
+    },
+    {
+      "topic": "Date Operations",
+      "question_id": 27,
+      "question": "Write a Groovy code to calculate the age based on a date of birth string ('yyyy-MM-dd'). The age should be calculated relative to the fixed date of 2024-01-01.",
+      "sample_test_cases": [
+        {
+          "input": "'1994-01-01'",
+          "expected_output": "30"
+        },
+        {
+          "input": "'2000-06-15'",
+          "expected_output": "23"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "'2023-12-31'",
+          "expected_output": "0"
+        },
+        {
+          "input": "'1999-01-02'",
+          "expected_output": "24"
+        }
+      ]
+    },
+    {
+      "topic": "Date Operations",
+      "question_id": 28,
+      "question": "Write a Groovy code that returns the dates 10 days before and after the given date ('yyyy-MM-dd'). The code should return a map.",
+      "sample_test_cases": [
+        {
+          "input": "'2023-10-27'",
+          "expected_output": "{\"before\":\"2023-10-17\",\"after\":\"2023-11-06\"}"
+        },
+        {
+          "input": "'2024-01-01'",
+          "expected_output": "{\"before\":\"2023-12-22\",\"after\":\"2024-01-11\"}"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "'2024-03-05'",
+          "expected_output": "{\"before\":\"2024-02-24\",\"after\":\"2024-03-15\"}"
+        },
+        {
+          "input": "'2023-01-05'",
+          "expected_output": "{\"before\":\"2022-12-26\",\"after\":\"2023-01-15\"}"
+        }
+      ]
+    },
+    {
+      "topic": "Date Operations",
+      "question_id": 29,
+      "question": "Write a Groovy code to get a date after 2 weeks from a given date. The input and output should be a String in 'yyyy-MM-dd' format.",
+      "sample_test_cases": [
+        {
+          "input": "'2023-01-01'",
+          "expected_output": "\"2023-01-15\""
+        },
+        {
+          "input": "'2023-12-20'",
+          "expected_output": "\"2024-01-03\""
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "'2024-02-20'",
+          "expected_output": "\"2024-03-05\""
+        },
+        {
+          "input": "'2023-06-15'",
+          "expected_output": "\"2023-06-29\""
+        }
+      ]
+    },
+    {
+      "topic": "Date Operations",
+      "question_id": 30,
+      "question": "Write a Groovy code to change the format of a date from 'yyyy-MM-dd' to 'dd-MMM-yyyy'.",
+      "sample_test_cases": [
+        {
+          "input": "'2023-10-27'",
+          "expected_output": "\"27-Oct-2023\""
+        },
+        {
+          "input": "'2000-01-01'",
+          "expected_output": "\"01-Jan-2000\""
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "'2025-05-01'",
+          "expected_output": "\"01-May-2025\""
+        },
+        {
+          "input": "'2024-12-31'",
+          "expected_output": "\"31-Dec-2024\""
+        }
+      ]
+    },
+    {
+      "topic": "Closures",
+      "question_id": 31,
+      "question": "Write a Groovy code that uses a closure to find the first number in the list that is greater than 2. The code should return an Integer, or null if no such number exists.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 2, 3, 4, 1]",
+          "expected_output": "3"
+        },
+        {
+          "input": "[0, 1, 2]",
+          "expected_output": "null"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[]",
+          "expected_output": "null"
+        },
+        {
+          "input": "[3, 1, 5]",
+          "expected_output": "3"
+        }
+      ]
+    },
+    {
+      "topic": "Closures",
+      "question_id": 32,
+      "question": "Write a Groovy code that uses a closure to find all numbers in the list that are greater than 2. The code should return a list of integers.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 2, 3, 4, 5, 1]",
+          "expected_output": "[3,4,5]"
+        },
+        {
+          "input": "[3, 4, 5]",
+          "expected_output": "[3,4,5]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[1, 2]",
+          "expected_output": "[]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[]"
+        }
+      ]
+    },
+    {
+      "topic": "Closures",
+      "question_id": 33,
+      "question": "Write a Groovy code that uses a closure to return a new list with each number squared.",
+      "sample_test_cases": [
+        {
+          "input": "[1, 2, 3]",
+          "expected_output": "[1,4,9]"
+        },
+        {
+          "input": "[0, 5, -2]",
+          "expected_output": "[0,25,4]"
+        }
+      ],
+      "hidden_test_cases": [
+        {
+          "input": "[10]",
+          "expected_output": "[100]"
+        },
+        {
+          "input": "[]",
+          "expected_output": "[]"
+        }
+      ]
+    }
+  ]
+}

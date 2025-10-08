@@ -1,0 +1,322 @@
+/* --- General Body & Layout --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #007bff;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: calc(100vh - 160px);
+}
+
+.left-panel, .right-panel {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.left-panel { width: 40%; }
+.right-panel { width: 60%; }
+
+/* --- Question and Test Case Display --- */
+.question-section, .test-cases-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+h2, h3 {
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+#question-description {
+    line-height: 1.6;
+}
+
+.test-case {
+    background-color: #ffffff;
+    border-left: 3px solid #007bff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+}
+
+.test-case h4 {
+    margin: 0 0 10px 0;
+    color: #495057;
+}
+
+.test-case pre, .result-details pre {
+    background-color: #e9ecef;
+    color: #212529;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    border: 1px solid #dee2e6;
+}
+
+/* === THE DEFINITIVE CSS FIX STARTS HERE === */
+
+/* --- CodeMirror Editor --- */
+/* The editor's container must be a flex item that can grow and shrink. */
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto; /* Shorthand for: flex-grow, flex-shrink, flex-basis */
+    min-height: 250px; /* Give it a reasonable minimum height */
+}
+
+/* The CodeMirror instance should fill its container completely. */
+.CodeMirror {
+    flex-grow: 1; /* Makes the editor fill the available space in its container */
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    height: 100%;
+}
+
+/* All other direct children of the right panel should NOT shrink. */
+.action-buttons,
+.results-container,
+.custom-input-container {
+    flex-shrink: 0;
+}
+
+/* === THE DEFINITIVE CSS FIX ENDS HERE === */
+
+
+/* --- Buttons --- */
+.btn {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#run-btn, #custom-run-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+#run-btn:hover:not(:disabled), #custom-run-btn:hover:not(:disabled) {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+footer {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 2px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#question-counter {
+    font-size: 1.1em;
+    color: #6c757d;
+}
+.nav-btn {
+    background-color: #6c757d;
+    color: white;
+}
+.nav-btn:hover:not(:disabled) {
+    background-color: #5a6268;
+}
+
+.finish-btn {
+    background-color: #dc3545;
+    color: white;
+}
+.finish-btn:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+.hidden { display: none; }
+
+/* --- Results Display --- */
+.results-container {
+    min-height: 100px;
+}
+#results-output .placeholder {
+    color: #6c757d;
+    text-align: center;
+    padding: 20px;
+}
+
+.overall-status {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overall-status .score {
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-case {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-left-width: 4px;
+    transition: background-color 0.3s;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.result-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.9em;
+}
+
+/* --- Status Colors (Minimalist) --- */
+.status {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.status-accepted { color: #28a745; background-color: #e9f7ec; }
+.status-border-accepted { border-left-color: #28a745; }
+
+.status-failed { color: #dc3545; background-color: #fdebec; }
+.status-border-failed { border-left-color: #dc3545; }
+
+.status-error { color: #fd7e14; background-color: #fff4e7; }
+.status-border-error { border-left-color: #fd7e14; }
+
+/* --- Final Summary Page --- */
+#final-summary-container {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+#final-summary-container h2 { color: #28a745; font-size: 2em; }
+#final-summary-container h3 { font-size: 1.5em; margin-bottom: 20px; }
+.final-scores-list { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; text-align: left; }
+.final-score-item { display: flex; justify-content: space-between; padding: 15px; background-color: #f8f9fa; border-radius: 5px; font-size: 1.1em; }
+.score-value { font-weight: bold; color: #007bff; }
+#final-summary-container hr { margin: 30px auto; width: 80%; border: 0; border-top: 1px solid #dee2e6; }
+.total-score h4 { font-size: 1.8em; font-weight: 500; }
+
+/* --- Custom Input Styles --- */
+.custom-input-container {
+    margin-top: 20px;
+    border-top: 2px solid #dee2e6;
+    padding-top: 15px;
+}
+.custom-input-label {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+.custom-input-label code {
+    background-color: #e9ecef;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+#custom-input-area {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#custom-output-container pre {
+    background-color: #e9ecef;
+    color: #212529;
+    padding: 15px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    border: 1px solid #dee2e6;
+    margin-top: 10px;
+}
+#custom-output-container h4 {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #495057;
+}

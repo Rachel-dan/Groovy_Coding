@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy Task Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/material-darker.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Groovy Task Validation</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="left-panel">
+                <div class="question-section">
+                    <h2 id="question-title">Loading...</h2>
+                    <p id="question-description"></p>
+                    <div>
+                    <h4>How to Write Your Code</h4>
+                        <ul>
+                            <li>A variable named <code>input</code> containing the test data is always provided for you.</li>
+                            <li>Just write the script logic to solve the problem using the <code>input</code> variable.</li>
+                            <li>Write the script logic to solve the problem and store your final answer in a variable (e.g., <code>result</code>).</li>
+    <li>To submit your answer, you <strong>must</strong> end your script with a <code>println groovy.json.JsonOutput.toJson(variable_name)</code> statement.</li>
+                    </div>
+                </div>
+                <div class="test-cases-section">
+                    <h3>Sample Test Cases</h3>
+                    <div id="sample-test-cases-container">
+                        <!-- Sample cases will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="editor-container">
+                    <h3>Your Code</h3>
+                    <textarea id="code-editor"></textarea>
+                </div>
+                 <div class="action-buttons">
+                    <button id="run-btn" class="btn">Run Code</button>
+                </div>
+                <div class="results-container">
+                    <h3>Test Results</h3>
+                    <div id="results-output">
+                         <p class="placeholder">Run the code to see the results.</p>
+                    </div>
+                </div>
+                
+                <!-- NEW: Custom Input Section -->
+                <div class="custom-input-container">
+                    <h3>Custom Input</h3>
+                    <p class="custom-input-label">Enter arguments exactly as they would appear in a function call (e.g., <code>'some string'</code>, <code>[1, 2, 3]</code>, or <code>['a':1], 'b'</code>).</p>
+                    <textarea id="custom-input-area" rows="3"></textarea>
+                    <div class="action-buttons">
+                        <button id="custom-run-btn" class="btn">Run with Custom Input</button>
+                    </div>
+                    <div id="custom-output-container" class="hidden">
+                        <h4>Custom Run Output:</h4>
+                        <pre id="custom-output-area"></pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div id="final-summary-container" class="hidden">
+            <!-- Final summary will be dynamically inserted here -->
+        </div>
+
+        <footer>
+            <div class="navigation-buttons">
+                <button id="prev-btn" class="btn nav-btn" disabled>« Previous</button>
+                <span id="question-counter"></span>
+                <button id="next-btn" class="btn nav-btn">Next »</button>
+                <button id="finish-btn" class="btn finish-btn hidden">Finish Test</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/groovy/groovy.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

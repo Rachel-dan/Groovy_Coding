@@ -1,0 +1,150 @@
+{
+    "user_1": [
+        {
+            "question_id": 16,
+            "question": "Write a Groovy code to copy one list into another. The code should return a new list that is a copy of the sourceList.",
+            "user_code": "def sourceList = input[0]\n\n// Create a new ArrayList, passing the source list to its constructor.\n// This creates a shallow copy of the list.\ndef result = new ArrayList(sourceList)\n\nprintln groovy.json.JsonOutput.toJson(result)",
+            "status": "Accepted",
+            "results": [
+                {
+                    "expected_output": "[1,2,3]",
+                    "hidden": false,
+                    "input": "[[1, 2, 3]]",
+                    "status": "Accepted",
+                    "test_case_id": 1,
+                    "user_output": "[1,2,3]"
+                },
+                {
+                    "expected_output": "[\"a\",\"b\"]",
+                    "hidden": false,
+                    "input": "[['a', 'b']]",
+                    "status": "Accepted",
+                    "test_case_id": 2,
+                    "user_output": "[\"a\",\"b\"]"
+                },
+                {
+                    "hidden": true,
+                    "status": "Accepted",
+                    "test_case_id": 3
+                },
+                {
+                    "hidden": true,
+                    "status": "Accepted",
+                    "test_case_id": 4
+                }
+            ],
+            "score": 20,
+            "max_score": 20
+        },
+        {
+            "question_id": 28,
+            "question": "Write a Groovy code that returns the dates 10 days before and after the given date ('yyyy-MM-dd'). The code should return a map.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        },
+        {
+            "question_id": 4,
+            "question": "Write a Groovy code that outputs the number with the digits reversed. The code should return an integer.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        },
+        {
+            "question_id": 33,
+            "question": "Write a Groovy code that uses a closure to return a new list with each number squared.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        },
+        {
+            "question_id": 20,
+            "question": "Write a Groovy code that searches for a key in a Map. The code should return true if the key is available, otherwise false.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        }
+    ],
+    "user_2": [
+        {
+            "question_id": 33,
+            "question": "Write a Groovy code that uses a closure to return a new list with each number squared.",
+            "user_code": "def numbers = input\n\n// The 'collect' method iterates through each item in the list,\n// applies the closure to it, and returns a new list with the results.\n// 'it' is the implicit variable representing the current item.\ndef result = numbers.collect { it * it }\n\nprintln groovy.json.JsonOutput.toJson(result)",
+            "status": "Accepted",
+            "results": [
+                {
+                    "expected_output": "[1,4,9]",
+                    "hidden": false,
+                    "input": "[1, 2, 3]",
+                    "status": "Accepted",
+                    "test_case_id": 1,
+                    "user_output": "[1,4,9]"
+                },
+                {
+                    "expected_output": "[0,25,4]",
+                    "hidden": false,
+                    "input": "[0, 5, -2]",
+                    "status": "Accepted",
+                    "test_case_id": 2,
+                    "user_output": "[0,25,4]"
+                },
+                {
+                    "hidden": true,
+                    "status": "Accepted",
+                    "test_case_id": 3
+                },
+                {
+                    "hidden": true,
+                    "status": "Accepted",
+                    "test_case_id": 4
+                }
+            ],
+            "score": 20,
+            "max_score": 20
+        },
+        {
+            "question_id": 14,
+            "question": "Write a Groovy code that returns a list containing the strings 'red', 'yellow', and 'blue'.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        },
+        {
+            "question_id": 25,
+            "question": "Write a Groovy code to display a fixed current date. For testing, this code should always return the string '2025-09-01'.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        },
+        {
+            "question_id": 3,
+            "question": "Write a Groovy code that returns a list of strings representing the multiplication table of that number from 1 to 10.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        },
+        {
+            "question_id": 19,
+            "question": "Write a Groovy code to remove a particular key-value pair from a map. The code should return the modified map.",
+            "user_code": "",
+            "status": "Not Attempted",
+            "results": [],
+            "score": 0,
+            "max_score": 0
+        }
+    ]
+}
