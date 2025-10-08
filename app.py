@@ -90,7 +90,7 @@ def run_groovy_script(script_content):
             text=True,
             encoding='utf-8'
         )
-        stdout, stderr = process.communicate(timeout=15)
+        stdout, stderr = process.communicate(timeout=60)
 
         # NEW LOGIC: If there is anything in stderr, it's a real error.
         if stderr:
