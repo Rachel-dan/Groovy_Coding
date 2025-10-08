@@ -40,16 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const initializeResults = () => {
-        userResults = questions.map(q => ({
-            question_id: q.question_id,
-            question: q.question,
-            user_code: q.code || "",
-            status: 'Not Attempted',
-            results: [],
-            score: 0,
-            max_score: 0
-        }));
-    };
+    userResults = questions.map(q => ({
+        question_id: q.question_id,
+        question: q.question,
+        user_code: q.code || "",
+        status: 'Not Attempted',
+        results: [],
+        score: 0,
+        // THE FIX IS HERE: Use the max_score provided by the backend
+        max_score: q.max_score || 0
+    }));
+};
 
     const renderSampleTestCases = (sampleCases) => {
         sampleTestCasesContainerEl.innerHTML = '';

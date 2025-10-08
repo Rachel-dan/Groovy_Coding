@@ -73,9 +73,17 @@ def get_questions(user_id):
     user_questions = all_assignments.get(user_id)
     if not user_questions:
         return jsonify({"error": f"No questions found for user '{user_id}'"}), 404
+
     questions_for_client = [q.copy() for q in user_questions]
     for q in questions_for_client:
+        # THE FIX IS HERE: Calculate max_score on the backend
+        sample_cases = q.get("sample_test_cases", [])
+        hidden_cases = q.get("hidden_test_cases", [])
+        q['max_score'] = (len(sample_cases) + len(hidden_cases)) * MARKS_PER_TEST_CASE
+        
+        # Now remove the hidden cases before sending to the client
         q.pop('hidden_test_cases', None)
+        
     return jsonify(questions_for_client)
 
 def run_groovy_script(script_content):
