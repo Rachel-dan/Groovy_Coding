@@ -1,4 +1,4 @@
-const RENDER_BACKEND_URL = 'https://groovy-backend.onrender.com';
+const RENDER_BACKEND_URL = 'https://groovy-code-validation-backend.onrender.com';
 document.addEventListener('DOMContentLoaded', () => {
     // --- DOM Elements ---
     const questionTitleEl = document.getElementById('question-title');
